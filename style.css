@@ -8,9 +8,12 @@
 }
 
 body {
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0f0c29;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-family: 'Outfit', sans-serif;
     color: var(--text-color);
     min-height: 100vh;
@@ -88,15 +91,18 @@ h1 {
     align-items: center;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 1rem;
-    min-height: 250px; /* Placeholder height */
+    /* padding: 1rem; */
+    min-height: 250px;
+    /* Placeholder height */
 }
 
 #qr-canvas {
     max-width: 100%;
+    height: auto;
     border-radius: 8px;
-    display: none; /* Hidden until generated */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: none;
+    /* Hidden until generated */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-download {
@@ -107,7 +113,8 @@ h1 {
     font-weight: 600;
     width: 100%;
     margin-top: 1rem;
-    display: none; /* Hidden until generated */
+    display: none;
+    /* Hidden until generated */
 }
 
 .btn-download:hover {
@@ -127,5 +134,7 @@ h1 {
 }
 
 @keyframes spin {
-    to { transform: rotate(360deg); }
+    to {
+        transform: rotate(360deg);
+    }
 }

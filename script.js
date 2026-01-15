@@ -79,7 +79,7 @@ function drawLogo() {
 
     // Logo settings
     const logoSize = canvasSize * 0.2; // Image size (20% of QR)
-    const padding = 3; // White border thickness
+    const padding = 4; // White border thickness
     const borderRadius = (logoSize / 2) + padding; // Radius of white background
 
     // Center coordinates
@@ -123,7 +123,10 @@ function finalizeGeneration() {
 downloadBtn.addEventListener('click', () => {
     // Create a temporary link
     const link = document.createElement('a');
-    link.download = 'qr-code-with-logo.png';
+    const now = new Date();
+    const pad = (n) => String(n).padStart(2, '0');
+    const timestamp = `${now.getFullYear().toString()}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`;
+    link.download = `qr-code-${timestamp}.png`;
     link.href = qrCanvas.toDataURL('image/png');
     document.body.appendChild(link);
     link.click();
