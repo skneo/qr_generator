@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="glass-card">
+        <h1>QR Generator</h1>
+        
+        <div class="mb-3">
+            <input type="text" class="form-control" id="textData" placeholder="Enter link or text here..." autocomplete="off">
+        </div>
+
+        <button id="generateBtn" class="btn btn-primary btn-generate">
+            Genererate QR Code
+        </button>
+
+        <div class="qr-container" id="qr-container">
+            <div id="loading-spinner" class="loading-spinner"></div>
+            <canvas id="qr-canvas"></canvas>
+            <p class="text-white-50 mt-2 mb-0" id="placeholder-text" style="display:none;">QR Code will appear here</p>
+        </div>
+
+        <button id="downloadBtn" class="btn btn-success btn-download">
+            Download QR Code
+        </button>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- QRCode Library (node-qrcode browser build) -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>
