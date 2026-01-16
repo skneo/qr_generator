@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,19 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="glass-card">
         <h1>QR Generator</h1>
-        
-        <div class="mb-3">
-            <input type="text" class="form-control" id="textData" placeholder="Enter link or text here..." autocomplete="off">
+
+        <div class="">
+            <input type="text" class="form-control" id="textData" placeholder="Enter link or text here..."
+                autocomplete="off">
+        </div>
+        <div>
+            <input type="checkbox" class="me-2" id="logoInput" checked>
+            <label for="logoInput">QR with Logo</label>
         </div>
 
         <button id="generateBtn" class="btn btn-primary btn-generate">
@@ -40,4 +47,5 @@
     <!-- Custom Script -->
     <script src="script.js"></script>
 </body>
+
 </html>

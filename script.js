@@ -5,6 +5,7 @@ const downloadBtn = document.getElementById('downloadBtn');
 const qrCanvas = document.getElementById('qr-canvas');
 const qrContainer = document.getElementById('qr-container');
 const loadingSpinner = document.getElementById('loading-spinner');
+const logoInput = document.getElementById('logoInput');
 
 // Logo Image Source
 const LOGO_SRC = 'logo.png'; // Local logo file
@@ -12,6 +13,7 @@ const LOGO_SRC = 'logo.png'; // Local logo file
 // Initialize - Load logo to cache it
 const logoImg = new Image();
 logoImg.src = LOGO_SRC;
+let showLogo = true;
 
 generateBtn.addEventListener('click', () => {
     const text = textInput.value.trim();
@@ -27,9 +29,9 @@ generateBtn.addEventListener('click', () => {
 
     // Simulate small delay for UX or ensure logo is loaded
     if (logoImg.complete) {
-        generateQRCode(text);
+        generateQRCode(text, showLogo);
     } else {
-        logoImg.onload = () => generateQRCode(text);
+        logoImg.onload = () => generateQRCode(text, showLogo);
         logoImg.onerror = () => {
             console.error("Failed to load logo. Generating without logo.");
             generateQRCode(text, false); // Fallback
@@ -131,4 +133,8 @@ downloadBtn.addEventListener('click', () => {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+});
+
+logoInput.addEventListener('change', (e) => {
+    showLogo = e.target.checked;
 });
