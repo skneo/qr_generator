@@ -41,7 +41,7 @@ generateBtn.addEventListener('click', () => {
 
 function generateQRCode(text, withLogo = true) {
     // Canvas dimensions
-    const canvasSize = 300;
+    const canvasSize = 2000;
 
     // Generate QR to canvas
     // Using QRCode library from CDN (exposed as window.QRCode or similar, need to check specific library)
@@ -81,7 +81,7 @@ function drawLogo() {
 
     // Logo settings
     const logoSize = canvasSize * 0.2; // Image size (20% of QR)
-    const padding = 4; // White border thickness
+    const padding = 10; // White border thickness
     const borderRadius = (logoSize / 2) + padding; // Radius of white background
 
     // Center coordinates

@@ -97,8 +97,15 @@ h1 {
 }
 
 #qr-canvas {
+    width: 100% !important;
+    /* Force width to fit container */
     max-width: 100%;
-    height: auto;
+    height: auto !important;
+    /* Force auto height to respect aspect ratio */
+    aspect-ratio: 1 / 1;
+    /* Enforce square shape */
+    object-fit: contain;
+    /* Ensure content fits aspect ratio */
     border-radius: 8px;
     display: none;
     /* Hidden until generated */
