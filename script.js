@@ -81,7 +81,7 @@ function drawLogo() {
 
     // Logo settings
     const logoSize = canvasSize * 0.2; // Image size (20% of QR)
-    const padding = 10; // White border thickness
+    const padding = 20; // White border thickness
     const borderRadius = (logoSize / 2) + padding; // Radius of white background
 
     // Center coordinates
